@@ -17,11 +17,11 @@ module "network" {
 module "documentdb" {
   source = "github.com/jakefurlong/terraform-modules/modules/documentdb"
 
-  cluster-name = "west-cluster"
-  master-username = "eastadmin"
-  master-password = "eastpassword"
-  retention-period = 5
-  backup-window = "07:00-09:00"
+  cluster-name        = "east-cluster"
+  master-username     = "eastadmin"
+  master-password     = "eastpassword"
+  retention-period    = 5
+  backup-window       = "07:00-09:00"
   skip-final-snapshot = true
 }
 
